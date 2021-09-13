@@ -157,28 +157,79 @@ img {
     font-weight: 600;
 }
 
-.work {
-    font-family: open sans;
+        /* Work */
+
+.container {  
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+    
+  .split {
     display: flex;
-    justify-content: space-around;
+    gap: 16px;
     flex-wrap: wrap;
-}
+    justify-content: center;
+  }
 
-.work .content {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+  .split > * {
+    flex-basis: 30%;
+    min-width: 240px;
+  }
 
-.work .content .workBx {
-    width: 50%;
-    padding: 20px;
-}
+  .work {
+    padding-top: 60px;
+  }
 
-.work .content .workBx img {
+  .featured-details {
+    max-width: 100%;
+    padding-top: 2px;
+    opacity: 0;
+    margin-right: 8%;
+    -webkit-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .featured-img {
+    border: 8px solid black;
     max-width: 100%;
 }
+
+.my-work {
+    position: relative;
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 2;
+    transition: opacity 250ms ease-in-out;
+    }
+    
+  .my-work:hover .featured-details, .my-work:focus .my-work {
+    opacity: 1;
+    text-shadow: 0 0 2em white;
+    }
+    
+    
+    .my-work:hover, .my-work:focus {
+    opacity: .8;
+  }
+    
+    
+  .featured-details span {
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+  }
 
 .contact {
     background: #111;
@@ -286,25 +337,6 @@ img {
     padding: 0px 20px;
     color: #111;
 }
-
-.container {  
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-    
-  .split {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .split > * {
-    flex-basis: 30%;
-    min-width: 240px;
-  }
-
 
 
 
